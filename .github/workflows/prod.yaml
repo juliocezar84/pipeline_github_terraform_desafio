@@ -1,0 +1,19 @@
+name: "Pipeline PROD"
+
+on:
+  push:
+    branches: [ prod ]
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  terraform:
+    uses: ./.github/workflows/terraform.yaml
+    with:
+      environment: prod
+      aws-region: "us-east-1"
+      aws-state-s3-bucket: "pipeline-github-terraform"
+      aws-lock-table: "pipeline-github-terraform-lock-table"
+      aws-assume-role-arn: "arn:aws:iam::743085301680:role/pipeline_github_terraform"

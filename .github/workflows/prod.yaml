@@ -15,5 +15,5 @@ jobs:
       environment: prod
       aws-region: "us-east-1"
       aws-state-s3-bucket: "pipeline-github-terraform-desafio"
-      aws-lock-table: "pipeline-github-terraform-desafio-lock-table-desafio"
+      aws-lock-table: "pipeline-github-terraform-lock-table-desafio"
       aws-assume-role-arn: "arn:aws:iam::743085301680:role/pipeline_github_terraform"

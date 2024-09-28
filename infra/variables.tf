@@ -1,4 +1,4 @@
-variable "pipe_bucket_prefix" {
+variable "pipe_ec2_prefix" {
     type = string
     description = "Prefix to the bucket_name"
 }

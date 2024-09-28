@@ -13,6 +13,10 @@ provider "aws" {
   region = var.region
 }
 
-resource "aws_ami" "terraform-aws-ec2" {
-  ec2_prefix = var.ec2_prefix
+resource "aws_instance" "terraform-aws-ec2" {
+  ami  = var.instance_ami
+  instance_type = var.instance_type
+  tags = {
+    Name = var.ec2_name
+  }
 }

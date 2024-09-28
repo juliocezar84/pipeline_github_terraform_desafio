@@ -14,6 +14,5 @@ provider "aws" {
 }
 
 resource "aws_ami" "terraform-aws-ec2" {
-  ec2_prefix = var.ec2_prefix
-  name = "test"
+  name = var.ec2_name
 }

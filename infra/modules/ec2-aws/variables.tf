@@ -4,7 +4,7 @@ variable "region" {
   default     = "us-east-1"
 }
 
-variable "ec2_prefix" {
-  description = "The Prefix to name the ec2 instance"
+variable "ec2_name" {
+  description = "The name of ec2 instance"
   type        = string
 }

@@ -14,7 +14,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "terraform-aws-ec2" {
-  ami  = var.instance_ami
+  ami = var.instance_ami
   instance_type = var.instance_type
   tags = {
     Name = var.ec2_name

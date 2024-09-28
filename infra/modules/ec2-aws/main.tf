@@ -15,4 +15,12 @@ provider "aws" {
 
 resource "aws_ami" "terraform-aws-ec2" {
   name = var.ec2_name
+  virtualization_type = "hvm"
+  root_device_name    = "/dev/xvda"
+  imds_support        = "v2.0"
+  ebs_block_device {
+    device_name = "/dev/xvda"
+    snapshot_id = "snap-xxxxxxxx"
+    volume_size = 8
+  }
 }

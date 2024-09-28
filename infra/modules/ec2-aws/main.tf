@@ -13,6 +13,10 @@ provider "aws" {
   region = var.region
 }
 
-resource "aws_s3_bucket" "terraform-aws-bucket" {
-  bucket_prefix = var.bucket_prefix
+resource "aws_instance" "terraform-aws-ec2" {
+  ami  = var.instance_ami
+  instance_type = var.instance_type
+  tags = {
+    Name = var.ec2_name
+  }
 }

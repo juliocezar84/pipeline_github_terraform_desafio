@@ -18,8 +18,4 @@ resource "aws_ami" "terraform-aws-ec2" {
   virtualization_type = "hvm"
   root_device_name    = "/dev/xvda"
   imds_support        = "v2.0"
-  ebs_block_device {
-    device_name = "/dev/xvda"
-    volume_size = 8
-  }
 }
